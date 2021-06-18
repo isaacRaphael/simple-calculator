@@ -1,5 +1,6 @@
 let display = document.getElementById('display')
 let buttons = document.querySelectorAll('.buttons')
+let bs = document.querySelector('.bs')
 let buttonsArray = [...buttons]
 
 buttonsArray.forEach(button => {
@@ -14,21 +15,19 @@ buttonsArray.forEach(button => {
 		} 
 		else if (!display.innerText && key === "=") {
 				display.innerText =''
-			}
+			}	
 		else {
 			display.innerText += key
 		}
-
 	})
-
 }
 )
 
 function performTask(equation){
 	let result = eval(equation)
-	if(result){
+	if(result && !'Error'){
 		return result
 	} else {
 		return 'Error'
-	}
+	} 
 }
