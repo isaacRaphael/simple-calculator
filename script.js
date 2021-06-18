@@ -9,9 +9,13 @@ buttonsArray.forEach(button => {
 			display.innerText = display.innerText.slice(0 , -1)
 		} else if (key === 'C') {
 			display.innerText =''
-		} else if (key === "=") {
+		} else if (display.innerText && key === "=") {
 			display.innerText = performTask(display.innerText)
-		} else {
+		} 
+		else if (!display.innerText && key === "=") {
+				display.innerText =''
+			}
+		else {
 			display.innerText += key
 		}
 
