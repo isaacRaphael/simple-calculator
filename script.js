@@ -25,7 +25,7 @@ buttonsArray.forEach(button => {
 
 function performTask(equation){
 	let result = eval(equation)
-	if(result && !'Error'){
+	if(result && result !== 'Error'){
 		return result
 	} else {
 		return 'Error'
