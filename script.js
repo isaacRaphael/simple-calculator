@@ -1,6 +1,5 @@
 let display = document.getElementById('display')
 let buttons = document.querySelectorAll('.buttons')
-let bs = document.querySelector('.bs')
 let buttonsArray = [...buttons]
 
 buttonsArray.forEach(button => {
@@ -27,7 +26,7 @@ function performTask(equation){
 	let result = eval(equation)
 	if(result && result !== 'Error'){
 		return result
-	} else {
+	} else { 
 		return 'Error'
 	} 
 }
